@@ -9,6 +9,10 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Rr]ecycleBin/
+
+# User-specific settings (not shared across team members)
+/[Uu]serSettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -32,6 +36,7 @@ ExportedObj/
 *.csproj
 *.unityproj
 *.sln
+*.slnx
 *.suo
 *.tmp
 *.user
@@ -54,8 +59,13 @@ sysinfo.txt
 
 # Builds
 *.apk
+*.aab
 *.unitypackage
+*.app
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# Burst AOT compiled outputs
+/[Bb]uildCache/
 
