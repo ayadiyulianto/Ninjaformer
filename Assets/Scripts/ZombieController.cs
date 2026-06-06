@@ -134,7 +134,7 @@ public class ZombieController : MonoBehaviour
 	void Death()
 	{
 		isDead = true;
-		rigid.velocity = Vector2.zero;
+		rigid.linearVelocity = Vector2.zero;
 		anim.SetTrigger("dead");
 		audioSource.clip = audioDie;
 		audioSource.Play();

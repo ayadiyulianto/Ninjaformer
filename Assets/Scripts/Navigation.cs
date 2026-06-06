@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Navigation : MonoBehaviour
 {
+    PlayerControls controls;
     public GameObject exitPanel;
-
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        if (Input.GetKeyUp(KeyCode.Escape) && exitPanel != null) {
-            exitPanel.SetActive(true);
-        }
+        controls = new PlayerControls();
+
+        controls.UI.Cancel.performed += ctx =>
+        {
+            exitPanel?.SetActive(true);
+        };
     }
 
     public void Load(string sceneName)
